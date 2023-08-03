@@ -32,7 +32,36 @@ public class DishServiceImpl implements DishService {
     }
 
     @Override
-    public Optional<DishDTO> create(DishDTO dishDTO) {
-        return Optional.of(mapper.toDishDTO(repository.save(mapper.toDishEntity(dishDTO))));
+    public Optional<DishDTO> create(DishDTO dishDTO)
+    {
+        return Optional.of(
+                mapper.toDishDTO(
+                        repository.save(
+                                mapper.toDishEntity(dishDTO)
+                        )
+                ));
+    }
+
+    @Override
+    public Optional<DishDTO> update(DishDTO dishDTO) {
+        if (repository.existsById(dishDTO.getId())){
+            return Optional.of(
+                    mapper.toDishDTO(
+                            repository.save(
+                                    mapper.toDishEntity(dishDTO)
+                            )
+                    ));
+        }
+        return Optional.of(new DishDTO());
+    }
+
+    @Override
+    public boolean delete(int id) {
+        if (repository.existsById(id)){
+            repository.deleteById(id);
+            return true;
+        }
+
+        return false;
     }
 }

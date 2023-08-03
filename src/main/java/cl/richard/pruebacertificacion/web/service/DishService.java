@@ -9,4 +9,6 @@ public interface DishService {
     Optional<List<DishDTO>> findAll();
     Optional<DishDTO> findById(int id);
     Optional<DishDTO> create(DishDTO dishDTO);
+    Optional<DishDTO> update(DishDTO dishDTO);
+    boolean delete(int id);
 }
