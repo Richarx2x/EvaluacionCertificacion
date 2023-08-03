@@ -34,22 +34,22 @@
       <tr th:each="orden : ${orders.orElse(null)}">
         <td th:text="${orden?.getId()}"></td>
         <td th:text="${orden?.getTableId()}"></td>
-        <td th:text="${orden?.getWeiterId()}"></td>
+        <td th:text="${orden?.getWaiterDTO().getName()}"></td>
         <td th:text="${orden?.getDate()}"></td>
         <td th:text="${orden?.getTotal()}"></td>
         <td><a class="fa-solid fa-pen-to-square" th:href="@{#}"></a></td>
       </tr>
 
-<!--      <tr th:each ="orden :${orders}">
-        <td th:text="${orden.getId()}"></td>
-        <td th:text="${orden.getTableId()}"></td>
-        <td th:text="${orden.getWeiterId()}"></td>
-        <td th:text="${orden.getDate()}"></td>
-        <td th:text="${orden.getTotal()}"></td>
+<!--      <tr th:each="orden : ${orders.orElse(null)}">
+        <td th:text="${orden?.getId()}"></td>
+        <td th:text="${orden?.getTableId()}"></td>
+        <td th:text="${orden?.getWeiterId()}"></td>
+        <td th:text="${orden?.getDate()}"></td>
+        <td th:text="${orden?.getTotal()}"></td>
         <td><a class="fa-solid fa-pen-to-square" th:href="@{#}"></a></td>
-        <td><a class="fa-solid fa-pen-to-square" th:href="@{/cliente/u/{Id}(Id=${cliente.getId()})}"></a></td>
+      </tr>-->
 
-      </tr> -->
+
       </th:each>
       </tbody>
     </table>
