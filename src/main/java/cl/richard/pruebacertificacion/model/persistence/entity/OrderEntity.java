@@ -1,7 +1,5 @@
 package cl.richard.pruebacertificacion.model.persistence.entity;
 
-import cl.richard.pruebacertificacion.model.domain.dto.TableDTO;
-import cl.richard.pruebacertificacion.model.domain.dto.WaiterDTO;
 import jakarta.persistence.*;
 import lombok.*;
 

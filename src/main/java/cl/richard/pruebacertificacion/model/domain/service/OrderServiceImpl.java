@@ -1,15 +1,15 @@
 package cl.richard.pruebacertificacion.model.domain.service;
 
 import cl.richard.pruebacertificacion.model.domain.dto.OrderDTO;
-import cl.richard.pruebacertificacion.model.persistence.mapping.DishMapper;
 import cl.richard.pruebacertificacion.model.persistence.mapping.OrderMapper;
-import cl.richard.pruebacertificacion.model.persistence.repository.DishRepository;
 import cl.richard.pruebacertificacion.model.persistence.repository.OrderRepository;
 import cl.richard.pruebacertificacion.web.service.OrderService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class OrderServiceImpl implements OrderService {
 
     private final OrderRepository repository;

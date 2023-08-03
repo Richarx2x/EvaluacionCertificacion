@@ -6,10 +6,12 @@ import cl.richard.pruebacertificacion.model.persistence.mapping.TableMapper;
 import cl.richard.pruebacertificacion.model.persistence.repository.DishRepository;
 import cl.richard.pruebacertificacion.model.persistence.repository.TableRepository;
 import cl.richard.pruebacertificacion.web.service.TableService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class TableServiceImpl implements TableService {
 
     private final TableRepository repository;

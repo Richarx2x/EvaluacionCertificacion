@@ -4,10 +4,12 @@ import cl.richard.pruebacertificacion.model.domain.dto.OrderDetailDTO;
 import cl.richard.pruebacertificacion.model.persistence.mapping.OrderDetailMapper;
 import cl.richard.pruebacertificacion.model.persistence.repository.OrderDetailRepository;
 import cl.richard.pruebacertificacion.web.service.OrderDetailService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class OrderDetailServiceImpl implements OrderDetailService {
     private final OrderDetailRepository repository;
     private final OrderDetailMapper mapper;

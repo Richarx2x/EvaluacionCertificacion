@@ -4,10 +4,12 @@ import cl.richard.pruebacertificacion.model.domain.dto.WaiterDTO;
 import cl.richard.pruebacertificacion.model.persistence.mapping.WaiterMapper;
 import cl.richard.pruebacertificacion.model.persistence.repository.WaiterRepository;
 import cl.richard.pruebacertificacion.web.service.WaiterService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class WaiterServiceImpl implements WaiterService {
 
     private final WaiterRepository repository;

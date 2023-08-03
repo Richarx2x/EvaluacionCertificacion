@@ -4,11 +4,13 @@ import cl.richard.pruebacertificacion.model.domain.dto.DishDTO;
 import cl.richard.pruebacertificacion.model.persistence.mapping.DishMapper;
 import cl.richard.pruebacertificacion.model.persistence.repository.DishRepository;
 import cl.richard.pruebacertificacion.web.service.DishService;
+import org.springframework.stereotype.Service;
 
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class DishServiceImpl implements DishService {
 
     private final DishRepository repository;
